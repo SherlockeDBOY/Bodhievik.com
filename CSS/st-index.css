@@ -1,0 +1,30 @@
+/* Fonts */
+@import url(https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Prata&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+/* Fonts */
+
+/* Body Style */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Aleo;
+  overflow-x: hidden;
+}
+/* Body Style */
+
+/* General Styles */
+
+p {
+  font-family: Poppins !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --txt-green: #5cdb95;
+}
+/* General Styles */
