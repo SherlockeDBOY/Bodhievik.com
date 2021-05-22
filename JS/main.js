@@ -43,6 +43,62 @@ close.addEventListener("click",function(){
 })
 
 
+const faders = document.querySelectorAll(".fade-in");
+const sliders = document.querySelectorAll(".slide-in");
+console.log(sliders);
+const fadeOptions = {
+  threshold:0,
+  rootMargin: '0px 0px -150px 0px'
+}
+const appearOptions = {
+    threshold:0,
+    rootMargin: '0px 0px -320px 0px'
+}
+
+
+const appearOnScroll = new IntersectionObserver(
+    function(
+        entries,
+        appearOnScroll
+    ){
+        entries.forEach(entry => {
+            if (!entry.isIntersecting){
+              entry.target.classList.remove("appear");
+                return;
+            }else {
+                entry.target.classList.add("appear");
+                // appearOnScroll.unobserve(entry.target);
+            }
+        });
+    }, 
+    appearOptions);
+
+const fadeInOnScroll = new IntersectionObserver(
+      function(
+          entries,
+          fadeInOnScroll
+      ){
+          entries.forEach(entry => {
+              if (!entry.isIntersecting){
+                entry.target.classList.remove("appear");
+                  return;
+              }else {
+                  entry.target.classList.add("appear");
+                  // fadeInOnScroll.unobserve(entry.target);
+              }
+          });
+      }, 
+      fadeOptions);
+
+    faders.forEach(fader => {
+      fadeInOnScroll.observe(fader);
+      
+    });
+
+    sliders.forEach(slider => {
+        appearOnScroll.observe(slider);
+    });
+
 
 let slides = document.querySelectorAll('.vid-slides');
 let index = 1;
