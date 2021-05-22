@@ -672,23 +672,33 @@
       <div class="contact-wrapper" id="contact">
         <div class="overlay-wrapper"></div>
         <div class="header">
-          <h1>Contact Us</h1>
-          <p>Hello there!!!</p>
+          <h1>Let's Talk</h1>
         </div>
         <div class="form">
           <form action="mailer-rest.php" method="POST" id="contactUsForm">
-            <input
-              type="text"
-              name="user_name"
-              placeholder="Name"
-              required="required"
-            />
-            <input
-              type="email"
-              name="email_id"
-              placeholder="E-Mail"
-              required="required"
-            />
+            <div class="form-div">
+              <input
+                type="text"
+                id="user"
+                name="user_name"
+                placeholder=""
+                required="required"
+                class="form-input"
+              />
+              <label for="" class="form-label">Name</label>
+            </div>
+            <div class="form-div">
+              <input
+                type="email"
+                id="mailId"
+                name="email_id"
+                placeholder=""
+                required="required"
+                class="form-input"
+              />
+              <label for="" class="form-label">Email</label>
+            </div>
+
             <button type="submit" name="submit" id="submit" class="button">
               Let's Talk</button
             ><span style="color: #5cdb95; margin-inline: 10px" id="msg"> </span>
